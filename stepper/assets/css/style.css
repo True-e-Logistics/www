@@ -81,9 +81,6 @@ ul.navbar-nav {
 	background: url(../img/logo-7-eleven-horizontal.svg) left center no-repeat;
 	text-indent: -99999px;
 }
-.logo {
-	margin: 11px 0 0;
-}
 
 /***** Top content *****/
 
@@ -137,10 +134,14 @@ ul.navbar-nav {
 
 
 /***** Media queries *****/
+.navbar-header {float: none!important}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.navbar-header {float: none!important}
+}
 
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar-header {float: none!important}
+}
 
 @media (max-width: 767px) {
 	
@@ -151,7 +152,9 @@ ul.navbar-nav {
 	.navbar-toggle { margin-top: 12px; }
 	
 	.top-content { padding: 0; }
-
+	.logo {
+		margin: 11px 0 0;
+	}
 }
 
 @media (max-width: 415px) {
@@ -160,6 +163,7 @@ ul.navbar-nav {
 	
 	.f1 { padding-bottom: 20px; }
 	.f1-buttons button { margin-bottom: 5px; }
+
 
 }
 
