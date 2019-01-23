@@ -91,13 +91,11 @@
                             <fieldset>
                                 <h4>ค้นหาตำแหน่ง</h4>
                                 <p>กรุณากดปุ่ม "ค้นหา" เพื่อทำการหาตำแหน่งร้าน</p>
+                                <button id="try-accuracy" type="button" class="btn btn-primary" onclick="javascript:askForCoordinate()">ค้นหา</button>
+                                <p id="accurate-too-bad">ความละเอียดของ GPS: <b class="accuracy-number"></b> เมตร (อนุญาตให้ไม่เกิน 30 เมตร) กรุณาเดินออกไปที่หน้าร้านค้าและกด "ค้นหา" อีกครั้ง</p>
+                                <p class="accurate-enough text-success">ความละเอียดของ GPS: <b class="accuracy-number"></b> เมตร (ผ่านเกณฑ์มาตรฐาน)</p>
                                 <div id="map"></div>
-                                <p id="accurate-too-bad">ความละเอียดของ GPS: <b class="accuracy-number"></b> เมตร (อนุญาตให้ไม่เกิน 30 เมตร) กรุณาเดินออกไปที่หน้าร้านค้าและกด "ค้นหา" อีกครั้ง่</p>
-                                <div id="try-accuracy" class="f1-buttons">
-                                    <button type="button" class="btn btn-primary" onclick="javascript:askForCoordinate()">ค้นหา</button>
-                                </div>
-                                <div id="accurate-enough" class="f1-buttons">
-                                    <p class="text-success">ความละเอียดของ GPS: <b class="accuracy-number"></b> เมตร (ผ่านเกณฑ์มาตรฐาน)</p>
+                                <div class="accurate-enough f1-buttons">
                                     <button type="button" class="btn btn-previous">ย้อนกลับ</button>
                                     <button type="button" class="btn btn-next">ถัดไป</button>
                                 </div>
@@ -107,11 +105,11 @@
                                 <h4>กรุณายืนยันข้อมูลร้านค้า:</h4>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-store-name">ชื่อร้านค้า</label>
-                                    <input type="text" placeholder="ชื่อร้านค้า" class="f1-store-name form-control" id="f1-store-name">
+                                    <input type="text" placeholder="ชื่อร้านค้า" class="f1-store-name form-control" id="f1-store-name" value="สุไหงโกลก">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-zipcode">รหัสไปรษณีย์</label>
-                                    <input type="text" placeholder="รหัสไปรษณีย์" class="f1-zipcode form-control" id="f1-zipcode">
+                                    <input type="number" placeholder="รหัสไปรษณีย์" class="f1-zipcode form-control" id="f1-zipcode" value="11210">
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">ย้อนกลับ</button>

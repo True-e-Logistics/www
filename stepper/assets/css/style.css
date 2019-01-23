@@ -216,5 +216,8 @@ table {
 
 #accurate-too-bad {
 	color: red;
-	margin: 10px 0 0;
+	margin: 0 0 10px;
+}
+#try-accuracy {
+	margin: 0 0 10px;
 }

@@ -139,7 +139,7 @@ function askForCoordinate () {
     }
 }
 function resetGPSAccuraceMessage () {
-    $('#accurate-too-bad, #accurate-enough').hide()
+    $('#accurate-too-bad, .accurate-enough').hide()
 }
 resetGPSAccuraceMessage()
 function resetCenter () {
@@ -180,7 +180,7 @@ function setCenter (position) {
     if (position.coords.accuracy > 30) {
         $('#accurate-too-bad').show()
     } else {
-        $('#accurate-enough').show()
+        $('.accurate-enough').show()
         $('#try-accuracy').hide()
     }
 
