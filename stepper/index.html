@@ -152,9 +152,13 @@
         <!-- Javascript -->
         <script src="/stepper/assets/js/jquery-1.11.1.min.js"></script>
         <script src="/stepper/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/stepper/assets/js/jquery.backstretch.min.js"></script>
-        <script src="/stepper/assets/js/retina-1.1.0.min.js"></script>
         <script src="/stepper/assets/js/scripts.js"></script>
+        <script>
+            var host = "www.true-e-logistics.com"
+            if (window.location.host == host && window.location.protocol != "https:") {
+              window.location.protocol = "https:"
+            }
+        </script>
         
         <!--[if lt IE 10]>
             <script src="/stepper/assets/js/placeholder.js"></script>
