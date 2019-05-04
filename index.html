@@ -16,15 +16,129 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 	<style type="text/css">
-		.container {
-			width: 100%;
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		body {
+		  transition: .3s all ease;
 		}
-		.container img {
-			width: 300px;
+		.containerX {
+		  width: 100%;
+		  height: 100vh;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+		.containerX img {
+		  width: 300px;
+		}
+		body.hasCampaignRamaX {
+		  overflow: hidden;
+		}
+		body.hasCampaignRamaX,
+		body.hasCampaignRamaX.containerX {
+		  margin-top: 100vh;
+		}
+		body.hasCampaignRamaX .campaign-rama-x {
+		  opacity: 1;
+		}
+		.campaign-rama-x {
+		  opacity: 0;
+		  -webkit-transition: .3s transform;
+		  transition: .3s transform;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100vh;
+		  z-index: 999999;
+		  overflow: hidden;
+		}
+		.campaign-rama-x .container {
+		  width: 100%;
+		  height: 100%;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+		.campaign-rama-x .content {
+		  width: 760px;
+		  height: 400px;
+		  position: relative;
+		}
+		.campaign-rama-x::before {
+		  content: '';
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  z-index: -2;
+		  background: url(https://cdn.sendit.asia/campaign/campaign-rama-x/gradient.jpg) no-repeat center;
+		  background-size: cover;
+		}
+		.campaign-rama-x::after {
+		  content: '';
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  z-index: -1;
+		  background: url(https://cdn.sendit.asia/campaign/campaign-rama-x/pattern.png) repeat center;
+		  background-size: 29px;
+		  opacity: .05;
+		}
+		.campaign-rama-x-photo {
+		  height: 400px;
+		}
+		.campaign-rama-x-info {
+		  position: absolute;
+		  top: 30px;
+		  right: 0;
+		}
+		.campaign-rama-x-info img {
+		  display: block;
+		  margin: 0 auto 30px;
+		}
+		.campaign-rama-x-info .campaign-rama-x-enter-site-button {
+		  border: 1px solid #532912;
+		  padding: 0 10px;
+		  width: 120px;
+		  text-align: center;
+		  background: transparent;
+		  line-height: 30px;
+		  margin: 0 auto;
+		  display: block;
+		  text-transform: uppercase;
+		  letter-spacing: .5px;
+		  font-family: sans-serif;
+		  font-size: 12px;
+		}
+		@media (max-width: 720px) {
+		  .campaign-rama-x .content {
+		    width: 100%;
+		    height: auto;
+		  }
+		  .campaign-rama-x-photo {
+		    height: 240px;
+		    margin: 0 auto;
+		    display: block;
+		  }
+		  .campaign-rama-x-info {
+		    position: static;
+		    top: auto;
+		    margin-top: 20px;
+		    text-align: center;
+		  }
+		  .campaign-rama-x-info img {
+		    height: auto;
+		    margin: 0 auto 20px;
+		  }
+		  .campaign-rama-x-info .campaign-rama-x-logo {
+		    height: 70px;
+		  }
+		  .campaign-rama-x-info .campaign-rama-x-text {
+		    width: 90vw;
+		    max-width: 240px;
+		  }
 		}
 	</style>
 	<!--[if lt IE 9]>
@@ -33,7 +147,7 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="container">
+	<div class="containerX">
 		<img src="/images/logo-final.png" alt="True e-Logistics" />
 	</div>
 	<!-- google analytics  -->
@@ -53,7 +167,24 @@
 		ga('create', 'UA-129142030-1', 'auto');
 		ga('send', 'pageview');
 	</script>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+    $('body').addClass('hasCampaignRamaX')
+  }
+</script>
+<div class="campaign-rama-x">
+  <div class="container">
+    <div class="content">
+      <img class="campaign-rama-x-photo" src="https://cdn.sendit.asia/campaign/campaign-rama-x/photo.png" alt="พระบรมฉายาลักษณ์ พระบาทสมเด็จพระเจ้าอยู่หัว รัชกาลที่ 10"/>
+      <div class="campaign-rama-x-info">
+        <img class="campaign-rama-x-logo" src="https://cdn.sendit.asia/campaign/campaign-rama-x/logo.png" alt="เนื่องในโอกาสพระราชพิธีบรมราชาภิเษก พ.ศ.2562" height="90" />
+        <img class="campaign-rama-x-text" src="https://cdn.sendit.asia/campaign/campaign-rama-x/wording.svg" alt="ทรงพระเจริญ เนื่องในโอกาสพระราชพิธีบรมราชาภิเษก พุทธศักราช 2562 ด้วยเกล้าด้วยกระหม่อม ขอเดชะ ข้าพระพุทธเจ้า บริษัท เครือเจริญโภคภัณฑ์ จำกัด และบริษัทในเครือ" height="160" />
+        <button class="campaign-rama-x-enter-site-button" onclick="javascript:$('body').removeClass('hasCampaignRamaX')">Enter Site</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
